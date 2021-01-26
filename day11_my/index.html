@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="calculator-display">0</div>
+
+            <div class="calculator-keys">
+                <button class="key-operators" data-action="add">+</button>
+                <button class="key-operators" data-action="subtract">-</button>
+                <button class="key-operators" data-action="multiply">&times</button>  <!--특정 특수문자들은 사용하려면 엔티티이름으로 써야함-->
+                <button class="key-operators" data-action="divide">&divide</button>
+
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>0</button>
+                <button data-action="decimal">.</button>
+                <button data-action="clear">AC</button>
+                <button class="key-equal" data-action="calculate">=</button>
+            
+            </div>
+        </div>
+        <script src="cal.js"></script>
+    </body>
+</html>
