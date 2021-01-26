@@ -1,0 +1,66 @@
+body {
+    margin:0;
+}
+
+.calculator {
+    border-radius: 12px;
+    box-shadow: 0 0 40px 0px rgba(0,0,0,0.15);
+
+    /*margin= 주변 공백 => atuo로 설정하면 자동적으로 옆의 공백을 조정해줌 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2em;
+
+    /* width = container의 넓이 지정*/
+    max-width: 15em;
+
+    /* overflow = max-width 범위를 넘겼을 때 처리 방법*/
+    overflow: hidden;
+}
+
+.calculator-display {
+    background-color: #222222;
+    color: #fff;
+    font-size: 1.7em;
+    padding: 0.5em 0.75em;  /*위아래 양옆*/
+    text-align: right;
+}
+
+
+.calculator-keys{
+    background-attachment: #999;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4,1fr); /* 1번째 인자: column 개수, 2번째 인자: column의 넓이: fr(fraction,공간비율) */
+}
+
+.calculator-keys > * {
+    background: #fff;
+    padding: 0.5em 1.25em;
+    position: relative;
+    text-align: center;
+}
+
+.calculator-keys > *:active::before,
+.calculator-keys > .is-depressed:before{
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+    content: "";
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.key-operators {
+    background-color: #eee;
+}
+
+.key-equal {
+    background-image: linear-gradient(to bottom,#fe886a, #ff7033);
+    grid-column: -2;
+    grid-row: 2 /span 4;  /* 2번째 줄에 위치하면서 4개크기를 합병*/
+}
